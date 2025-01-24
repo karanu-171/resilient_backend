@@ -114,7 +114,7 @@ public class HttpConfigurer {
     CorsWebFilter corsWebFilter() {
         CorsConfiguration corsConfig = new CorsConfiguration();
         corsConfig.setAllowCredentials(true);
-        corsConfig.setAllowedOrigins(Arrays.asList("http://localhost", "http://localhost:80","http://172.16.1.10:4012", "https://resilient-frontend-green.vercel.app", "http://197.155.71.138:4012/"));
+        corsConfig.setAllowedOrigins(Arrays.asList("http://localhost", "http://localhost:80","http://172.16.1.10:4012", "https://resilient-frontend-green.vercel.app", "http://197.155.71.138:4012"));
 
         corsConfig.setAllowedOrigins(Arrays.asList("http://localhost:4012", "http://172.16.1.10:4012", "https://resilient-frontend-green.vercel.app", "http://197.155.71.138:4012"));
         corsConfig.setMaxAge(3600L);
