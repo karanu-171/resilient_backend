@@ -100,7 +100,7 @@ public class HttpConfigurer {
         configuration.applyPermitDefaultValues();
         configuration.setAllowCredentials(true);
 
-       configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173/")); //developing
+       configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173/", "https://resilient-frontend-green.vercel.app/","http://localhost:4012", "http://172.16.1.10:4012", "http://197.155.71.138:4012")); //developing
         configuration.setAllowedMethods(Arrays.asList("GET","POST", "PATCH", "PUT", "DELETE", "OPTIONS"));
 //        configuration.setAllowedHeaders(Arrays.asList("Access-Control-Allow-Origin: *","Access-Control-Allow-Credentials:  Origin, Content-Type, X-Auth-Token, Authorization, Accept")); // developing
         configuration.setAllowedHeaders(Arrays.asList("X-Requested-With", "Origin", "Content-Type", "Accept", "Authorization")); //deploying
@@ -114,9 +114,9 @@ public class HttpConfigurer {
     CorsWebFilter corsWebFilter() {
         CorsConfiguration corsConfig = new CorsConfiguration();
         corsConfig.setAllowCredentials(true);
-        corsConfig.setAllowedOrigins(Arrays.asList("http://localhost", "http://localhost:80","http://172.16.1.10:4012", "https://resilient-frontend-green.vercel.app", "http://197.155.71.138:4012"));
+        corsConfig.setAllowedOrigins(Arrays.asList("http://localhost", "http://localhost:80","http://172.16.1.10:4012", "http://197.155.71.138:4012"));
 
-        corsConfig.setAllowedOrigins(Arrays.asList("http://localhost:4012", "http://172.16.1.10:4012", "https://resilient-frontend-green.vercel.app", "http://197.155.71.138:4012"));
+        corsConfig.setAllowedOrigins(Arrays.asList("http://localhost:4012", "http://172.16.1.10:4012", "http://197.155.71.138:4012"));
         corsConfig.setMaxAge(3600L);
         corsConfig.setAllowedMethods(Arrays.asList("GET","POST", "PATCH", "PUT", "DELETE", "OPTIONS"));
         corsConfig.setAllowedHeaders(Arrays.asList("X-Requested-With", "Origin", "Content-Type", "Accept", "Authorization"));
